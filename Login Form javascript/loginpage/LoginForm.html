@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer ></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="fullscreen-container">
+        <div class="login-container">
+            <h1 class="login-title">Welcome</h1>
+            <form id="form_id" class="form">
+                <div class="input-group" id="group_0">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" onkeyup="validate();" >
+                    <span class=" msg"></span>
+                </div>
+                <div class="input-group" id="group_1">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" onkeyup="Check_password() " required />
+                    <span class=" msg"></span>
+
+                </div>
+                <input class="submit" type="button" value="Submit" id="login" onclick="validate();" />
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+   
+</script>
+
+</html>

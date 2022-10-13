@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="index.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    :root {
+        --primary-lightblue: 200, 100%, 90%;
+        --primary-blue: 200, 100%, 50%;
+        --primary-darkblue: 200, 100%, 10%;
+        --success: 120, 100%, 50%;
+        --error: 0, 100%, 50%;
+        --red: red;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    body {
+        background-image: url(./Images/9BumOl.jpg);
+    }
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #form {
+        --color: hsl(var(--primary-darkblue), .7);
+        background-color: var(--color);
+        box-shadow: 0 0 15px 0 var(--color);
+        width: 500px;
+        min-width: 250px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #form h1 {
+        color: white;
+        text-align: center;
+    }
+
+    #form button {
+        padding: 0.4em 1em;
+        color: white;
+        font-size: 1rem;
+        --primary-blue: 212, 100%, 44%;
+        background-color: hsl(var(--primary-blue), 0.5);
+        border: 1px solid hsl(var(--primary-blue), 0.5);
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    #form button:hover{
+        background-color: hsl(var(--primary-blue), 0.7);
+
+    }
+
+    .input-control {
+        display: flex;
+        flex-direction: column;
+        color: white;
+
+    }
+
+    .input-control input {
+        padding: 10px;
+        display: block;
+        border: 2px solid transparent;
+        border-radius: 2px;
+        /* gap: 5px; */
+    }
+
+    .input-control input:focus {
+        outline: 0;
+        /* box-shadow: 0 0 1px 1px hsl(var(--primary-blue)); */
+      border: 2px solid hsl(var(--primary-blue));
+      border-radius: 2px;
+
+
+
+    }
+
+    .input-control.success input {
+        /* box-shadow: 0 0 1px 1px hsl(var(--success)); */
+      border: 2px solid hsl(var(--success));
+      border-radius: 2px;
+
+
+
+    }
+
+    .input-control.error input {
+        /* box-shadow: 0 0 2px 1px hsl(var(--error)); */
+      border: 2px solid hsl(var(--error));
+      border-radius: 2px;
+
+
+
+    }
+
+    .input-control .error {
+        color: hsl(var(--error));
+        font-size: .7rem;
+        height: 10px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        margin-bottom: 8px;
+
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <form action="./LoginForm.html" id="form">
+            <h1>Registration</h1>
+            <div class="input-control">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" onkeyup="validateInputUsername();">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" onkeyup="validateInputEmail();">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" onkeyup="validateInputPassword();">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password2"> Confirm Password</label>
+                <input type="password" name="password2" id="password2" onkeyup="validateInputPassword2();">
+                <div class="error"></div>
+            </div>
+            <button type="submit" onclick="">Sign Up</button>
+        </form>
+    </div>
+</body>
+
+</html>
+ 

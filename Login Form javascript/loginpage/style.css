@@ -1,0 +1,129 @@
+:root {
+    --primary-lightblue: 200, 100%, 90%;
+    --primary-blue: 200, 100%, 50%;
+    --primary-darkblue: 200, 100%, 10%;
+    --success: 120, 100%, 50%;
+    --error: 0, 100%, 50%;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.fullscreen-container {
+    background-image: url(./Images/9BumOl.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.login-container {
+    --color: hsl(var(--primary-darkblue), .7);
+    background-color: var(--color);
+    box-shadow: 0 0 15px 0 var(--color);
+    padding: 40px 30px;
+    width: 50%;
+    max-width: 500px;
+    min-width: 250px;
+    border-radius: 2px;
+}
+
+.login-title {
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    color: white;
+    font-weight: lighter;
+}
+
+.input-group input {
+    font-size: 1rem;
+    padding: .5em;
+    margin: .2rem;
+    outline: none;
+    border: none;
+    font-weight: lighter;
+    border: 2px solid transparent;
+
+
+}
+
+.input-group input:focus-within {
+    /* box-shadow: 0 0 1px 1px hsl(var(--primary-blue)); */
+    border: 2px solid hsl(var(--primary-blue));
+}
+
+.input-group.error input {
+    /* box-shadow: 0 0 2px 1px hsl(var(--error)); */
+    border: 2px solid hsl(var(--error));
+
+}
+
+.input-group.success input {
+    /* box-shadow: 0 0 1px 1px hsl(var(--success)); */
+    border: 2px solid hsl(var(--success));
+
+}
+
+.input-group .msg {
+    font-size: 0.85rem;
+    color: hsl(120, 98%, 43%);
+    display: flex;
+}
+
+.input-group.success .msg,
+.input-group.error .msg {
+    display: block;
+}
+
+.input-group.error .msg {
+    color: hsl(var(--error));
+}
+
+.input-group.success .msg {
+    color: hsl(var(--success));
+}
+
+.submit {
+    padding: 0.4em 1em;
+    color: white;
+    font-size: 1rem;
+    --primary-blue: 212, 100%, 44%;
+    background-color: hsl(var(--primary-blue), 0.5);
+    border: 1px solid hsl(var(--primary-blue), 0.5);
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: hsl(var(--primary-blue), 0.7);
+
+
+}

@@ -1,0 +1,60 @@
+//Issue: On Debit notes when adjamount > invoice it should be save. But its not.
+
+<script>
+    function adjustmentInvoiceApproveAmount(executionContext) {
+    try {
+        // Get the form context
+        var formContext = executionContext.getFormContext();
+        var saveEvent = executionContext.getEventArgs();
+        var adjustmentamount = formContext.getAttribute("case_adjustmentamount").getValue();
+        var amountdue = formContext.getAttribute("case_amountdue").getValue();
+        
+        //Check Condition before checking whether it is credit or debit
+        if (adjustmentamount >= amountdue) {
+            saveEvent.preventDefault();
+        }
+        // Get ajustment GUID
+        var adjustment = formContext.getAttribute("case_adjustment").getValue();
+        if (adjustment != null) {
+            var adjustmentGUID = adjustment[0].id.substring(1, 37);
+        }
+        console.log("GUID \"case_adjustment\" = " + adjustmentGUID + " ; " + typeof adjustmentGUID);
+        
+        //WebApi call under adj primary entity (adjustment) > adjtype > expand AdjustmentType > get case_name value = Credit Notes
+             Xrm.WebApi.retrieveMultipleRecords("case_adjustment", "?$select=_case_adjustmenttype_value&$expand=case_AdjustmentType($select=case_name)&$filter=case_adjustmentid eq " + adjustmentGUID).then(
+                function success(results) {
+                     debugger
+                     
+                    for (var i = 0; i < results.entities.length; i++) {
+                        console.log(results.entities[i]);
+                        var _case_adjustmenttype_value = results.entities[i]["_case_adjustmenttype_value"];
+                        console.log("case_name= " + _case_adjustmenttype_value);
+                        var casename = results.entities[i]["case_AdjustmentType"]["case_name"];
+                        console.log("case_name= " + casename);
+
+                        
+                        if (casename == "Credit notes") {
+                            if (adjustmentamount >= amountdue) {
+                                alert("Adjustment Amount cannot be more than Invoice Amount.");
+                            }
+                            else {
+                                console.log("This can be save");
+                                parent.Xrm.Page.data.entity.save();
+                            }
+                        }
+                        else {
+                            //only here cannot be use
+                            console.log("This is debit notes, can save");
+                            parent.Xrm.Page.data.entity.save();
+                        }
+                    }
+            },
+            function (error) {
+                Xrm.Utility.alertDialog(error.message);
+            }
+        );
+    } catch (error) {
+        console.log(error);
+    }
+}
+</script>
