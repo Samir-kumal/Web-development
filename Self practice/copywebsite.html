@@ -1,153 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./animation/animation.js"></script>
+    <script defer src="./animation/anime.min.js"></script>
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="main">
-        <header>
-            <div class="nav-wrap">
-                <img src="./opus-green.svg" alt="">
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="">HOME </a></li>
-                    <li><a href="">FEATURES </a></li>
-                    <li><a href="">CASE STUDIES </a></li>
-                    <li><a href="">SERVICES </a></li>
-                    <li><a href="">PRICING </a></li>
-                    <li><a href="">CONTACT </a></li>
-                </ul>
-            </div>
-
-            <div class="clickme">
-                <span>
-
-                    <a href="" class="btn">JOIN US</a>
-                </span>
-            </div>
-
-        </header>
-        <div class="textholder">
-            <p class="overtop msg">Creative Landing for <br> &nbsp;&nbsp;startup agencies</p><br><br>
-            <span class="undertop msg"> A digital marketing company that can produce custom built <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                websites and mobile application</span> <br>
-            <a href="" class="btn">Discover ave</a>
+      <header>
+        <div class="nav-wrap">
+          <svg
+            id="logo"
+            width="105"
+            height="46"
+            viewBox="0 0 105 46"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M104.132 10.8498C104.133 14.7738 102.127 18.2013 99.1316 20.1073C100.095 18.4616 100.661 16.5352 100.661 14.4663C100.661 8.47473 95.9981 3.61679 90.2463 3.61679C88.2597 3.61679 86.4126 4.2072 84.8323 5.21097C86.6624 2.09032 89.9524 0.00101304 93.7177 0.000296758C99.4688 0.000296758 104.132 4.85823 104.132 10.8498Z"
+              fill="#72EAA5"
+            />
+            <path
+              opacity="0.396"
+              d="M92.8859 17.1173C92.8863 19.2974 91.7517 21.2017 90.0573 22.2607C90.6023 21.3464 90.9225 20.2761 90.9225 19.1266C90.9225 15.7977 88.2846 13.0986 85.0308 13.0986C83.907 13.0986 82.8621 13.4266 81.9681 13.9843C83.0034 12.2505 84.8645 11.0897 86.9946 11.0893C90.248 11.0893 92.8859 13.7884 92.8859 17.1173Z"
+              fill="#72EAA5"
+            />
+            <path
+             id="coloring"
+              d="M1.08585 29.2087C1.08585 27.7121 1.30695 26.3812 1.74915 25.2159C2.19134 24.0505 2.78292 23.0631 3.5239 22.2535C4.26488 21.4439 5.11939 20.8306 6.08744 20.4135C7.05549 19.9964 8.07731 19.7879 9.15293 19.7879C10.2285 19.7879 11.2504 19.9964 12.2184 20.4135C13.1865 20.8306 14.041 21.4439 14.782 22.2535C15.5229 23.0631 16.1145 24.0505 16.5567 25.2159C16.9989 26.3812 17.22 27.7121 17.22 29.2087C17.22 30.6807 16.9989 31.9993 16.5567 33.1647C16.1145 34.33 15.5229 35.3114 14.782 36.1087C14.041 36.906 13.1865 37.5132 12.2184 37.9303C11.2504 38.3474 10.2285 38.5559 9.15293 38.5559C8.07731 38.5559 7.05549 38.3474 6.08744 37.9303C5.11939 37.5132 4.26488 36.906 3.5239 36.1087C2.78292 35.3114 2.19134 34.33 1.74915 33.1647C1.30695 31.9993 1.08585 30.6807 1.08585 29.2087ZM4.13341 29.2087C4.13341 30.2391 4.25293 31.1713 4.49195 32.0055C4.73098 32.8396 5.07158 33.5572 5.51378 34.1583C5.95598 34.7594 6.4878 35.2255 7.10927 35.5567C7.73074 35.8879 8.41195 36.0535 9.15293 36.0535C9.89391 36.0535 10.5751 35.8879 11.1966 35.5567C11.8181 35.2255 12.3499 34.7594 12.7921 34.1583C13.2343 33.5572 13.5749 32.8396 13.8139 32.0055C14.0529 31.1713 14.1724 30.2391 14.1724 29.2087C14.1724 28.1783 14.0529 27.2399 13.8139 26.3935C13.5749 25.5471 13.2343 24.8172 12.7921 24.2039C12.3499 23.5906 11.8181 23.1183 11.1966 22.7871C10.5751 22.4559 9.89391 22.2903 9.15293 22.2903C8.41195 22.2903 7.73074 22.4559 7.10927 22.7871C6.4878 23.1183 5.95598 23.5906 5.51378 24.2039C5.07158 24.8172 4.73098 25.5471 4.49195 26.3935C4.25293 27.2399 4.13341 28.1783 4.13341 29.2087ZM25.7737 39.6231V45.6583H22.8337V20.2295H25.2717L25.5227 22.2903H25.6302C26.419 21.6033 27.2855 21.0146 28.2296 20.5239C29.1738 20.0332 30.1598 19.7879 31.1876 19.7879C32.311 19.7879 33.3029 20.0025 34.1634 20.4319C35.0239 20.8612 35.741 21.4745 36.3146 22.2719C36.8883 23.0692 37.3245 24.026 37.6233 25.1423C37.9221 26.2586 38.0715 27.5159 38.0715 28.9143C38.0715 30.4354 37.8683 31.7908 37.462 32.9807C37.0556 34.1706 36.5059 35.1825 35.8127 36.0167C35.1195 36.8508 34.3188 37.4826 33.4105 37.9119C32.5022 38.3412 31.5461 38.5559 30.5422 38.5559C29.7295 38.5559 28.9228 38.3719 28.1221 38.0039C27.3213 37.6359 26.5146 37.133 25.702 36.4951L25.7737 39.6231ZM25.7737 34.1399C26.5624 34.8268 27.3273 35.3114 28.0683 35.5935C28.8093 35.8756 29.4666 36.0167 30.0402 36.0167C30.7573 36.0167 31.4206 35.8511 32.0301 35.5199C32.6396 35.1887 33.1655 34.7226 33.6077 34.1215C34.0499 33.5204 34.3965 32.7783 34.6474 31.8951C34.8984 31.0119 35.0239 30.0183 35.0239 28.9143C35.0239 27.9329 34.9402 27.0375 34.7729 26.2279C34.6056 25.4183 34.3367 24.7252 33.9662 24.1487C33.5957 23.5722 33.1177 23.1244 32.5321 22.8055C31.9465 22.4866 31.2473 22.3271 30.4346 22.3271C29.6937 22.3271 28.9467 22.5356 28.1938 22.9527C27.4409 23.3698 26.6342 23.9708 25.7737 24.7559V34.1399ZM43.5059 20.2295H46.4817V31.1591C46.4817 32.8519 46.7387 34.0724 47.2526 34.8207C47.7665 35.569 48.5971 35.9431 49.7444 35.9431C50.6527 35.9431 51.4534 35.7039 52.1466 35.2255C52.8398 34.7471 53.6046 33.9804 54.4412 32.9255V20.2295H57.3812V38.1143H54.9432L54.6922 35.3175H54.5846C53.7719 36.2988 52.9174 37.0839 52.0211 37.6727C51.1248 38.2615 50.0671 38.5559 48.8481 38.5559C46.9837 38.5559 45.6272 37.9671 44.7787 36.7895C43.9301 35.6119 43.5059 33.87 43.5059 31.5639V20.2295ZM63.8195 34.0663C64.5844 34.7042 65.3672 35.2194 66.1679 35.6119C66.9687 36.0044 67.8949 36.2007 68.9466 36.2007C70.0939 36.2007 70.9544 35.9308 71.5281 35.3911C72.1017 34.8513 72.3885 34.189 72.3885 33.4039C72.3885 32.9378 72.269 32.533 72.03 32.1895C71.791 31.846 71.4862 31.5455 71.1157 31.2879C70.7452 31.0303 70.321 30.8034 69.8429 30.6071L68.4088 30.0183C67.7873 29.7975 67.1659 29.546 66.5444 29.2639C65.9229 28.9818 65.3672 28.6383 64.8772 28.2335C64.3872 27.8287 63.9868 27.3564 63.6761 26.8167C63.3654 26.2769 63.21 25.6268 63.21 24.8663C63.21 24.1548 63.3474 23.4863 63.6223 22.8607C63.8972 22.2351 64.2916 21.6954 64.8055 21.2415C65.3194 20.7876 65.9468 20.4319 66.6878 20.1743C67.4288 19.9167 68.2654 19.7879 69.1976 19.7879C70.2971 19.7879 71.3069 19.9842 72.2272 20.3767C73.1474 20.7692 73.9422 21.2476 74.6115 21.8119L73.2132 23.7255C72.6156 23.2594 71.9942 22.8791 71.3488 22.5847C70.7034 22.2903 69.9983 22.1431 69.2334 22.1431C68.1339 22.1431 67.3272 22.4007 66.8133 22.9159C66.2994 23.4311 66.0424 24.0322 66.0424 24.7191C66.0424 25.1362 66.15 25.498 66.3651 25.8047C66.5802 26.1114 66.8671 26.3812 67.2256 26.6143C67.5842 26.8474 67.9965 27.0559 68.4626 27.2399C68.9287 27.4239 69.4127 27.614 69.9146 27.8103C70.5361 28.0556 71.1635 28.3132 71.797 28.5831C72.4304 28.853 72.9981 29.1903 73.5 29.5951C74.002 29.9999 74.4143 30.4967 74.737 31.0855C75.0596 31.6743 75.221 32.3857 75.221 33.2199C75.221 33.9559 75.0835 34.6428 74.8087 35.2807C74.5338 35.9186 74.1274 36.4828 73.5896 36.9735C73.0518 37.4642 72.3826 37.8506 71.5818 38.1327C70.7811 38.4148 69.8668 38.5559 68.839 38.5559C67.5961 38.5559 66.4129 38.3228 65.2895 37.8567C64.1661 37.3906 63.1861 36.8018 62.3495 36.0903L63.8195 34.0663Z"
+              
+              fill="black"
+            />
+          </svg>
         </div>
-        <img src="./Screenshot (123).jpg" alt="">
+        <div class="menu">
+          <ul>
+            <li><a href="">HOME </a></li>
+            <li><a href="">FEATURES </a></li>
+            <li><a href="">CASE STUDIES </a></li>
+            <li><a href="">SERVICES </a></li>
+            <li><a href="">PRICING </a></li>
+            <li><a href="">CONTACT </a></li>
+          </ul>
+        </div>
+
+        <div class="clickme">
+          <span>
+            <button class="btn"><a href="">JOIN US</a></button>
+          </span>
+          <span class="iconForDarkmode">
+            <p>Darkmode</p>
+            <svg
+              id="darkMode"
+              width="50"
+              height="50"
+              viewBox="0 0 50 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="sun"
+                d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                fill="#F3EB24"
+              />
+            </svg>
+          </span>
+        </div>
+      </header>
+      <div class="textholder">
+        <p class="overtop msg">
+          Creative Landing for <br />
+          &nbsp;&nbsp;startup agencies
+        </p>
+        <br /><br />
+        <span class="undertop msg">
+          A digital marketing company that can produce custom built <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          websites and mobile application</span
+        >
+        <br />
+        <a href="" class="btn">Discover ave</a>
+      </div>
+      <img src="./Screenshot (123).jpg" alt="" width="100%" />
     </div>
     <div class="main-2">
-        <div class="subcontainer1">
-            <span>EXCLUSIVE PORTFOLIO</span>
-            <p>
-                Having attractive <br> showcase has <br> never been easier
-            </p>
-        </div>
-        <div class="subcontainer2">
-            <p>
-                We’re a brand strategy and digital <br>
-                design agency, building brands that <br>
-                matter in culture. With more than ten <br>
-                years of knowledge and expertise.
-            </p>
-        </div>
-        <div class="subcontainer3">
-            <p>
-                We work with people who are as <br>
-                dedicated to their craft. We do <br>
-                everything with our core values of <br>
-                honesty, hard work, and trust.
-            </p>
-        </div>
+      <div class="subcontainer1">
+        <span>EXCLUSIVE PORTFOLIO</span>
+        <p>
+          Having attractive <br />
+          showcase has <br />
+          never been easier
+        </p>
+      </div>
+      <div class="subcontainer2">
+        <p>
+          We’re a brand strategy and digital <br />
+          design agency, building brands that <br />
+          matter in culture. With more than ten <br />
+          years of knowledge and expertise.
+        </p>
+      </div>
+      <div class="subcontainer3">
+        <p>
+          We work with people who are as <br />
+          dedicated to their craft. We do <br />
+          everything with our core values of <br />
+          honesty, hard work, and trust.
+        </p>
+      </div>
     </div>
     <div class="main-3">
-        <div class="options">
-            <ul>
-                <li><a href="">SELECTED WORK</a></li>
-                <li><a href="">BRANDED ECOMMERCE</a></li>
-                <li><a href="">DIGITAL EXPERIENCES</a></li>
-                <li><a href="">BRANDING STRATEGY</a></li>
-            </ul>
-        </div>
-        <a href="" class="btn btn1">SEE ALL WORK</a>
-
+      <div class="options">
+        <ul>
+          <li><a href="">SELECTED WORK</a></li>
+          <li><a href="">BRANDED ECOMMERCE</a></li>
+          <li><a href="">DIGITAL EXPERIENCES</a></li>
+          <li><a href="">BRANDING STRATEGY</a></li>
+        </ul>
+      </div>
+      <a href="" class="btn btn1">SEE ALL WORK</a>
     </div>
     <div class="main-4">
-        <div class="content-4">
-            <div class="box">
-                <img src="./pic1.png" alt="">
-                <h1>Orange tree</h1>
-                <p>Branding</p>
-                <div class="hovering-effect-1">
-                    <div class="text">
-                        <h1>Discover more</h1>
-                    </div>
-                </div>
+      <div class="content-4">
+        <div class="box">
+          <img src="./pic1.png" alt="" />
+          <h1><a href="" class="img-heading">Orange tree</a></h1>
+          <p><a href="" class="img-desc">&nbspBranding</a></p>
+          <div class="hovering-effect-1">
+            <div class="text">
+              <h1>Discover more</h1>
             </div>
-            <div class="box">
-                <img src="./pic2.png" alt="">
-                <h1><a href="">Orange tree</a> </h1>
-                <p>Branding</p>
-                <div class="hovering-effect">
-                    <div class="text">
-                        <h1>Discover more</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <img src="./pic3.png" alt="">
-                <h1>Feeling</h1>
-                <p>Branding</p>
-                <div class="hovering-effect-1">
-                    <div class="text">
-                        <h1>Discover more</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <img src="./pic4.png" alt="">
-                <h1><a href="">Magic water</a></h1>
-                <p>Branding</p>
-                <div class="hovering-effect">
-                    <div class="text">
-                        <h1>Discover more</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <img src="./pic5.png" alt="">
-
-                <h1><a href="">Tropical rebrand</a></h1>
-                <p>Branding</p>
-                <div class="hovering-effect-1">
-                    <div class="text">
-                        <h1>Discover more</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <img src="./pic6.png" alt="">
-                <h1><a href="">Peaceful night</a></h1>
-                <p>Branding</p>
-                <div class="hovering-effect">
-                    <div class="text">
-                        <h1>Discover more</h1>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="box">
+          <img src="./pic2.png" alt="" />
+          <h1><a href="" class="img-heading">Feeling</a></h1>
+          <p><a href="" class="img-desc">&nbspBranding</a></p>
+          <div class="hovering-effect">
+            <div class="text">
+              <h1>Discover more</h1>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img src="./pic3.png" alt="" />
+          <h1><a href="" class="img-heading">Watermelon</a></h1>
+          <p><a href="" class="img-desc">&nbspBranding</a></p>
 
+          <div class="hovering-effect-1">
+            <div class="text">
+              <h1>Discover more</h1>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img src="./pic4.png" alt="" />
+          <h1><a href="" class="img-heading">Magic water</a></h1>
+          <p><a href="" class="img-desc">&nbspBranding</a></p>
+
+          <div class="hovering-effect">
+            <div class="text">
+              <h1>Discover more</h1>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <a href=""><img src="./pic5.png" alt="" /></a>
+
+          <h1><a href="" class="img-heading">Tropical rebrand</a></h1>
+          <p><a href="" class="img-desc">&nbspBranding</a></p>
+
+          <div class="hovering-effect-1">
+            <div class="text">
+              <h1>Discover more</h1>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img src="./pic6.png" alt="" />
+          <h1><a href="" class="img-heading">Peaceful night</a></h1>
+          <p><a href="" class="img-desc">&nbspBranding</a></p>
+
+          <div class="hovering-effect">
+            <div class="text">
+              <h1>Discover more</h1>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="main-5">
-
-    </div>
-</body>
-
+    <div class="main-5"></div>
+  </body>
 </html>
