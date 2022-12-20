@@ -21,6 +21,7 @@ darkMode.addEventListener("click", () => {
     .add({
       targets: ".sun",
       d: [{ value: toggle ? sunPath : moonPath }],
+      fill : toggle ? "rgb(255, 239, 18)" : "rgb(255,255,255)"
     })
     .add(
       {

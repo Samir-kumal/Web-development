@@ -156,7 +156,7 @@ span{
     grid-template-columns: repeat(3, auto) ;
     gap: 3rem;
     padding: 10px;
-    /* background-color: #8C829B; */
+    /* background-color: ; */
 }
 .box{
     height: fit-content;
